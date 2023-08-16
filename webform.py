@@ -42,6 +42,12 @@ class FormApp:
         mobile = self.Mobile_entry.get()
         postcode = self.postcode_entry.get()
 
+        if name and mobile:
+            with open('web_form_info.txt','a') as file:
+                now = datetime.now()
+                message = f'you info /n {now} entries {name}/n{address}/n{mobile}'
+                print(message,file=file)
+
         
 
 
