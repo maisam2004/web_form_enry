@@ -11,8 +11,7 @@ class FormApp:
         #lables
         tk.Label(self.root,text="Name:",font=("Arial",16)).pack()
         self.name_entry = tk.Entry(self.root,width=40)
-        self.name_entry.grid(row=0, column=1, padx=10, pady=5)
-        self.name_entry.config(highlightthickness=1, highlightbackground="black")
+        
         self.name_entry.pack(padx=1,pady=1)
 
 
@@ -24,6 +23,13 @@ class FormApp:
         self.name_entry = tk.Entry(self.root,width=40)
         self.name_entry.pack(padx=1,pady=1)
 
+        tk.Label(self.root, text="Post Code:",font=("Arial",16)).pack()
+        self.postcode_entry = tk.Entry(self.root,width=40)
+        self.postcode_entry.pack(padx=1,pady=1)
+
+        # Submit Button
+        self.submit_button = tk.Button(self.root, text="Submit",font=("Arial",14))
+        self.submit_button.pack(padx=2,pady=2)
 
 if __name__ == "__main__":
     root = tk.Tk()
