@@ -6,11 +6,15 @@ class FormApp:
         self.root.title("User Info Form")
 
         self.root.geometry("450x450")
-    
+        self.create_form()
     def create_form(self):
         #lables
-        tk.Label(self.root,text="Name:",font=("Arial,18")).pack(padx=5,pady=5)
+        tk.Label(self.root,text="Name:",font=("Arial",16)).pack()
+        self.name_entry = tk.Entry(self.root,width=40)
+        self.name_entry.pack(padx=1,pady=1)
 
-root = tk.Tk()
-fform =FormApp(root)
-root.mainloop()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = FormApp(root)
+    root.mainloop()
