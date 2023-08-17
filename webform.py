@@ -1,7 +1,7 @@
 from datetime import datetime
 import tkinter as tk
 from tkinter import messagebox 
-form PIL import Image,ImageTK
+from PIL import Image,ImageTk
 
 class FormApp:
     def __init__(self,root):
@@ -10,6 +10,10 @@ class FormApp:
 
         self.root.geometry("450x450")
         self.create_form()
+        ## adding image to background
+        self.main_bg= ImageTk.PhotoImage(file="main_bg.jpg")
+        bg=tk.Label(self.root,image=self.main_bg).place(x=10,y=0,relwidth=1,relheight=1)
+
     def create_form(self):
         #lables
         tk.Label(self.root,text="Name:",font=("Arial",16)).pack(padx=10,pady=10)
