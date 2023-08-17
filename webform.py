@@ -14,17 +14,23 @@ class FormApp:
         self.main_bg= ImageTk.PhotoImage(file="main_bg.jpg")
         bg=tk.Label(self.root,image=self.main_bg).place(x=10,y=0,relwidth=1,relheight=1)
 
-### Register form by create frame
-        frame1 = tk.Frame(self.root,bg="white")
-        frame1.place(x=60,y=20,width=480,height=420)
 
+
+### Register form by create frame
+        frame1 = tk.Frame(self.root,bg="gray")
+        frame1.place(x=60,y=20,width=480,height=420)
+            ## lables and inputs inside of frame1
+        first_name=tk.Label(frame1,text="Name:",font=("Arial",14,"bold"),fg="green").place(x=20,y=30)
+        last_name=tk.Label(frame1,text="Last Name:",font=("Arial",14,"bold"),fg="green").place(x=250,y=30)
+
+        self.first_name_entry = tk.Entry(frame1,width=30)
+        self.first_name_entry.place(x=20,y=60)
 
 
     def create_form(self):
         #lables
         tk.Label(self.root,text="Name:",font=("Arial",16)).pack(padx=10,pady=10)
         self.name_entry = tk.Entry(self.root,width=40)
-        
         self.name_entry.pack(padx=1,pady=1)
 
 
