@@ -8,11 +8,17 @@ class FormApp:
         self.root = root
         self.root.title("User Info Form")
 
-        self.root.geometry("450x450")
+        self.root.geometry("650x550")
         self.create_form()
         ## adding image to background
         self.main_bg= ImageTk.PhotoImage(file="main_bg.jpg")
         bg=tk.Label(self.root,image=self.main_bg).place(x=10,y=0,relwidth=1,relheight=1)
+
+### Register form by create frame
+        frame1 = tk.Frame(self.root,bg="white")
+        frame1.place(x=60,y=20,width=480,height=420)
+
+
 
     def create_form(self):
         #lables
