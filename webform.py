@@ -17,7 +17,7 @@ class FormApp:
 
 
 ### Register form by create frame
-        frame1 = tk.Frame(self.root,bg="gray")
+        frame1 = tk.Frame(self.root,bg="black")
         frame1.place(x=60,y=20,width=480,height=420)
             ## lables and inputs inside of frame1
         first_name=tk.Label(frame1,text="Name:",font=("Arial",14,"bold"),fg="green").place(x=20,y=30)
@@ -28,7 +28,9 @@ class FormApp:
 
         self.last_name_entry = tk.Entry(frame1,width=30)
         self.last_name_entry.place(x=220,y=60)
-        
+
+
+
 
 
     def create_form(self):
