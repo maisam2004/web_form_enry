@@ -52,7 +52,7 @@ for widget in user_info_frame.winfo_children():
 
 #second lable frame
 courses_frame = tkinter.LabelFrame(frame,text="courses")
-courses_frame.grid(row=1,column=0,sticky="news",padx=20,pady=20)
+courses_frame.grid(row=1,column=0,sticky="news",padx=20,pady=10)
 
 registered_lable = tkinter.Label(courses_frame,text="Registeration Status")
 registered_lable.grid(row=0,column=0)
@@ -77,10 +77,12 @@ for widget in courses_frame.winfo_children():
 
 #terms condition frame
 terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
-terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=20)
+terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
 
 terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.")
 terms_check.grid(row=0,column=0)
 
-
+#add button
+button = tkinter.Button(frame,text="Enter data",fg="red")
+button.grid(row=3,column=0,sticky="news",padx=20,pady=20)
 window.mainloop() #come up with 
