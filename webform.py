@@ -26,6 +26,10 @@ class FormApp:
         self.first_name_entry = tk.Entry(frame1,width=30)
         self.first_name_entry.place(x=20,y=60)
 
+        self.last_name_entry = tk.Entry(frame1,width=30)
+        self.last_name_entry.place(x=220,y=60)
+        
+
 
     def create_form(self):
         #lables
