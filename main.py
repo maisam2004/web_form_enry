@@ -1,4 +1,7 @@
 import tkinter 
+#import ttk module from tkinter for use list theme
+from tkinter import ttk
+
 window = tkinter.Tk() #name root window 
 window.title("Data Entery form") #add title to window
 
@@ -23,7 +26,11 @@ first_name_entry.grid(row=1,column=0)
 last_name_entry = tkinter.Entry(user_info_frame)
 last_name_entry.grid(row=1,column=1)
 
+#list for user to select
+title_lable= tkinter.Label(user_info_frame,text="Title")
+title_combobox = ttk.Combobox(user_info_frame,values=[' ','MR.','MISS.','MRS.','DR.','PROF.'])
+title_lable.grid(column=2,row=0)
+title_combobox.grid(row=1,column=2)
 
 
-
-window.mainloop() #come up with it
+window.mainloop() #come up with 
