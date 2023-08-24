@@ -75,6 +75,30 @@ numsemesters_spinbox.grid(row=1,column=2)
 for widget in courses_frame.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
+
+#test user info
+second_users = tkinter.LabelFrame(frame,text="Second user")
+second_users.grid(row=3,column=0,sticky="news",padx=10,pady=10)
+
+fname = tkinter.Label(second_users,text="fname")
+fname.grid(row=0,column=0)
+fname_entry = tkinter.Entry(second_users)
+fname_entry.grid(row=1,column=0)
+
+ftitle = tkinter.Label(second_users,text="ftitle")
+ftitle.grid(row=0,column=1)
+ftitle_entery = ttk.Combobox(second_users,values=["Dr","pro.","Miss"])
+ftitle_entery.grid(row=1,column=1)
+
+fnumyears_lable = tkinter.Label(second_users,text="fnum_years")
+fnumyears_lable.grid(row=0,column=2)
+
+fnumyears = tkinter.Spinbox(second_users,from_="1900",to="infinity")
+fnumyears.grid(row=1,column=2)
+
+for wid in second_users.winfo_children():
+    wid.grid_configure(padx=10,pady=10)
+####end test user ifo
 #terms condition frame
 terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
 terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
@@ -82,7 +106,8 @@ terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
 terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.")
 terms_check.grid(row=0,column=0)
 
+
 #add button
 button = tkinter.Button(frame,text="Enter data",fg="red")
-button.grid(row=3,column=0,sticky="news",padx=20,pady=20)
+button.grid(row=4,column=0,sticky="news",padx=20,pady=20)
 window.mainloop() #come up with 
