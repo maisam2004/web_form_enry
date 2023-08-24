@@ -60,4 +60,9 @@ registered_lable.grid(row=0,column=0)
 registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered")
 registered_check.grid(row=1,column=0)
 
+numcourses_lable = tkinter.Label(courses_frame,text="Completed_courses")
+numcourses_spinbox = tkinter.Spinbox(courses_frame,from_=0,to="infinity")
+
+numcourses_lable.grid(row=0,column=1)
+numcourses_spinbox.grid(row=1,column=1)
 window.mainloop() #come up with 
