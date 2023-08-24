@@ -51,7 +51,13 @@ for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
 #second lable frame
-courses_frame = tkinter.LabelFrame(frame)
-courses_frame.grid(row=1,column=0,stick="news",padx=20,pady=20)
+courses_frame = tkinter.LabelFrame(frame,text="courses")
+courses_frame.grid(row=1,column=0,sticky="news",padx=20,pady=20)
+
+registered_lable = tkinter.Label(courses_frame,text="Registeration Status")
+registered_lable.grid(row=0,column=0)
+
+registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered")
+registered_check.grid(row=1,column=0)
 
 window.mainloop() #come up with 
