@@ -50,4 +50,8 @@ nationality_combobox.grid(row=3,column=2)
 for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
+#second lable frame
+courses_frame = tkinter.LabelFrame(frame)
+courses_frame.grid(row=1,column=0,stick="news",padx=20,pady=20)
+
 window.mainloop() #come up with 
