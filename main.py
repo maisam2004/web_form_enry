@@ -60,9 +60,20 @@ registered_lable.grid(row=0,column=0)
 registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered")
 registered_check.grid(row=1,column=0)
 
-numcourses_lable = tkinter.Label(courses_frame,text="Completed_courses")
+numcourses_lable = tkinter.Label(courses_frame,text="# Completed_courses")
 numcourses_spinbox = tkinter.Spinbox(courses_frame,from_=0,to="infinity")
 
 numcourses_lable.grid(row=0,column=1)
 numcourses_spinbox.grid(row=1,column=1)
+
+numsemesters_lable = tkinter.Label(courses_frame,text="# Semesters")
+numsemesters_lable.grid(row=0,column=2)
+numsemesters_spinbox = tkinter.Spinbox(courses_frame,from_=0,to="infinity" )
+numsemesters_spinbox.grid(row=1,column=2)
+
+#to specify padding fro all parts inside of user info frame
+for widget in courses_frame.winfo_children():
+    widget.grid_configure(padx=10,pady=5)
+
+
 window.mainloop() #come up with 
