@@ -32,5 +32,22 @@ title_combobox = ttk.Combobox(user_info_frame,values=[' ','MR.','MISS.','MRS.','
 title_lable.grid(column=2,row=0)
 title_combobox.grid(row=1,column=2)
 
+#age lable
+age_lable = tkinter.Label(user_info_frame,text='Age')
+age_lable.grid(row=2,column=0)
+#to create age spinbox 
+age_spinbox = tkinter.Spinbox(user_info_frame,from_=18 ,to=110)
+age_spinbox.grid(row=3,column=0)
+
+#create nationality input
+nationality_lable = tkinter.Label(user_info_frame,text="Nationality")
+nationality_lable.grid(row=2,column=2)
+
+nationality_combobox =ttk.Combobox(user_info_frame,values=['indian',"bangali","turkey","uk"])
+nationality_combobox.grid(row=3,column=2)
+
+#to specify padding fro all parts inside of user info frame
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10,pady=5)
 
 window.mainloop() #come up with 
