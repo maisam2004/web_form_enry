@@ -75,9 +75,9 @@ registered_lable = tkinter.Label(courses_frame,text="Registeration Status")
 registered_lable.grid(row=0,column=0)
 
 #create var to enable get checkbox click,and store in stringvar
-reg_status_var = tkinter.StringVar()
+reg_status_var = tkinter.StringVar(value="NOT Registerd")
 
-registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered",variable=reg_status_var ,onvalue="Restered",offvalue="NOT Registerd")
+registered_check = tkinter.Checkbutton(courses_frame,text="Currently Registered",variable=reg_status_var ,onvalue="Registered",offvalue="NOT Registerd")
 registered_check.grid(row=1,column=0)
 
 numcourses_lable = tkinter.Label(courses_frame,text="# Completed_courses")
