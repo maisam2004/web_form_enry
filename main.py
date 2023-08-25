@@ -2,6 +2,12 @@ import tkinter
 #import ttk module from tkinter for use list theme
 from tkinter import ttk
 
+#function for button clicked 
+def enter_data():
+     print('Hi ,you clicked me?')
+
+
+
 window = tkinter.Tk() #name root window 
 window.title("Data Entery form") #add title to window
 
@@ -111,6 +117,6 @@ terms_check.grid(row=0,column=0)
 
 
 #add button
-button = tkinter.Button(frame,text="Enter data",fg="red")
+button = tkinter.Button(frame,text="Enter data",fg="red",command=enter_data)
 button.grid(row=4,column=0,sticky="news",padx=20,pady=20)
 window.mainloop() #come up with 
