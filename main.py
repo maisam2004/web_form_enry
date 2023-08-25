@@ -2,6 +2,11 @@ import tkinter
 #import ttk module from tkinter for use list theme
 from tkinter import ttk
 
+from tkinter import messagebox
+
+
+
+
 #function for button clicked 
 def enter_data():
     terms = accept_var.get()
@@ -21,7 +26,8 @@ def enter_data():
         print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
         print(numcourses,numsemesters,'reg status > ',registration_status)
     else:
-        print("Errors.")
+        #messagebox.showerror(title='untick terms',message="Please check term and conditions ")
+        messagebox.showinfo(title="Error" ,message="You have not accepted terms and conditions ")
         
 
 
@@ -135,7 +141,7 @@ terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
 #variable for terms check box
 #terms_status = tkinter.BooleanVar(value=False)
 accept_var = tkinter.StringVar(value="Not accepted")
-terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.",variable=accept_var,onvalue='Accpted',offvalue="Not accepted")
+terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.",variable=accept_var,onvalue='Accepted',offvalue="Not accepted")
 terms_check.grid(row=0,column=0)
 
 
