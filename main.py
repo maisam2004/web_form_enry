@@ -76,8 +76,8 @@ for widget in courses_frame.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
 
-#test user info
-second_users = tkinter.LabelFrame(frame,text="Second user")
+#test user info just for practice
+second_users = tkinter.LabelFrame(frame,text="Second user",background='red')
 second_users.grid(row=3,column=0,sticky="news",padx=10,pady=10)
 
 fname = tkinter.Label(second_users,text="fname")
