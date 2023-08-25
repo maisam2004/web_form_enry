@@ -77,7 +77,7 @@ for widget in courses_frame.winfo_children():
 
 
 #test user info just for practice
-second_users = tkinter.LabelFrame(frame,text="Second user",background='red')
+second_users = tkinter.LabelFrame(frame,text="Second user",background='#e6f2ff')
 second_users.grid(row=3,column=0,sticky="news",padx=10,pady=10)
 
 fname = tkinter.Label(second_users,text="fname")
@@ -87,7 +87,8 @@ fname_entry.grid(row=1,column=0)
 
 ftitle = tkinter.Label(second_users,text="ftitle")
 ftitle.grid(row=0,column=1)
-ftitle_entery = ttk.Combobox(second_users,values=["Dr","pro.","Miss"])
+books=['live','div','pre','code','colors','rainbox']
+ftitle_entery = ttk.Combobox(second_users,values=books)
 ftitle_entery.grid(row=1,column=1)
 
 fnumyears_lable = tkinter.Label(second_users,text="fnum_years")
