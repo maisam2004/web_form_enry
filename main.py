@@ -4,20 +4,24 @@ from tkinter import ttk
 
 #function for button clicked 
 def enter_data():
-     
-    fname= first_name_entry.get()
-    lname= last_name_entry.get()
-    title= title_combobox.get()
-    age = age_spinbox.get()
-    national = nationality_combobox.get()
-    #course info
-    numcourses = numcourses_spinbox.get()
-    numsemesters = numsemesters_spinbox.get()
-    registration_status = reg_status_var.get()
+    terms = accept_var.get()
 
-    print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
-    print(numcourses,numsemesters,'reg status > ',registration_status)
-    
+    if terms == "Accepted":
+     
+        fname= first_name_entry.get()
+        lname= last_name_entry.get()
+        title= title_combobox.get()
+        age = age_spinbox.get()
+        national = nationality_combobox.get()
+        #course info
+        numcourses = numcourses_spinbox.get()
+        numsemesters = numsemesters_spinbox.get()
+        registration_status = reg_status_var.get()
+
+        print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
+        print(numcourses,numsemesters,'reg status > ',registration_status)
+    else:
+        print("Errors.")
         
 
 
