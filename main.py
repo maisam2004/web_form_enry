@@ -8,23 +8,27 @@ from tkinter import messagebox
 
 
 #function for button clicked 
-def enter_data():
+def enter_data():  # sourcery skip: extract-method
     terms = accept_var.get()
 
     if terms == "Accepted":
      
         fname= first_name_entry.get()
         lname= last_name_entry.get()
-        title= title_combobox.get()
-        age = age_spinbox.get()
-        national = nationality_combobox.get()
-        #course info
-        numcourses = numcourses_spinbox.get()
-        numsemesters = numsemesters_spinbox.get()
-        registration_status = reg_status_var.get()
+        if fname and lname:
+            title= title_combobox.get()
+            age = age_spinbox.get()
+            national = nationality_combobox.get()
+            #course info
+            numcourses = numcourses_spinbox.get()
+            numsemesters = numsemesters_spinbox.get()
+            registration_status = reg_status_var.get()
 
-        print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
-        print(numcourses,numsemesters,'reg status > ',registration_status)
+            print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
+            print('number of courses ',numcourses,'and number of semesters = ',numsemesters,'reg status > ',registration_status)
+            print("__ ____ ____ ___ ___ _ ____  ___ _ ____ ___ _ ___ __ ")
+        else:
+            messagebox.showerror(title="names error" ,message="plaese enter first and last name !")
     else:
         #messagebox.showerror(title='untick terms',message="Please check term and conditions ")
         messagebox.showinfo(title="Error" ,message="You have not accepted terms and conditions ")
