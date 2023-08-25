@@ -10,7 +10,7 @@ frame.pack()
 #create three lable frame in frame ,width and height ,3 rows and one column
 
 user_info_frame = tkinter.LabelFrame(frame,text="User Information")
-user_info_frame.grid(row=0,column=0,padx=20,pady=20)
+user_info_frame.grid(row=0,column=0,padx=20,pady=10)
 
 #inside user info frame
 
@@ -44,6 +44,7 @@ nationality_lable = tkinter.Label(user_info_frame,text="Nationality")
 nationality_lable.grid(row=2,column=2)
 
 nationality_combobox =ttk.Combobox(user_info_frame,values=['indian',"bangali","turkey","uk"])
+
 nationality_combobox.grid(row=3,column=2)
 
 #to specify padding fro all parts inside of user info frame
