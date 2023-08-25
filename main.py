@@ -4,18 +4,21 @@ from tkinter import ttk
 
 #function for button clicked 
 def enter_data():
-     fname= first_name_entry.get()
-     lname= last_name_entry.get()
-     title= title_combobox.get()
-     age = age_spinbox.get()
-     national = nationality_combobox.get()
-     #course info
-     numcourses = numcourses_spinbox.get()
-     numsemesters = numsemesters_spinbox.get()
-     registration_status = reg_status_var.get()
+     
+    fname= first_name_entry.get()
+    lname= last_name_entry.get()
+    title= title_combobox.get()
+    age = age_spinbox.get()
+    national = nationality_combobox.get()
+    #course info
+    numcourses = numcourses_spinbox.get()
+    numsemesters = numsemesters_spinbox.get()
+    registration_status = reg_status_var.get()
 
-     print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
-     print(numcourses,numsemesters,'reg status > ',registration_status)   
+    print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
+    print(numcourses,numsemesters,'reg status > ',registration_status)
+    
+        
 
 
 window = tkinter.Tk() #name root window 
@@ -125,7 +128,10 @@ for wid in second_users.winfo_children():
 terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
 terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
 
-terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.")
+#variable for terms check box
+#terms_status = tkinter.BooleanVar(value=False)
+accept_var = tkinter.StringVar(value="Not accepted")
+terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.",variable=accept_var,onvalue='Accpted',offvalue="Not accepted")
 terms_check.grid(row=0,column=0)
 
 
