@@ -4,7 +4,13 @@ from tkinter import ttk
 
 #function for button clicked 
 def enter_data():
-     print('Hi ,you clicked me?')
+     fname= first_name_entry.get()
+     lname= last_name_entry.get()
+     title= title_combobox.get()
+     age = age_spinbox.get()
+     national = nationality_combobox.get()
+
+     print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
 
 
 
