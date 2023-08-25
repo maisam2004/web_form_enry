@@ -1,9 +1,11 @@
 import tkinter 
+
 #import ttk module from tkinter for use list theme
 from tkinter import ttk
 
 from tkinter import messagebox
 
+from datetime import datetime
 
 
 
@@ -23,10 +25,16 @@ def enter_data():  # sourcery skip: extract-method
             numcourses = numcourses_spinbox.get()
             numsemesters = numsemesters_spinbox.get()
             registration_status = reg_status_var.get()
+            now = datetime.now()
+            whole_text_info = "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n"
+            whole_text_info += f'{now:%M:%S} \n first name : {fname} , last name = {lname}, \n rgistery status ={registration_status}  age : {age} natinality :{national}'
+            whole_text_info += "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+            with open('new_file.txt','+a')as Textfile:
+                print(whole_text_info,file=Textfile)
 
-            print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
+            """ print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
             print('number of courses ',numcourses,'and number of semesters = ',numsemesters,'reg status > ',registration_status)
-            print("__ ____ ____ ___ ___ _ ____  ___ _ ____ ___ _ ___ __ ")
+            print("__ ____ ____ ___ ___ _ ____  ___ _ ____ ___ _ ___ __ ") """
         else:
             messagebox.showerror(title="names error" ,message="plaese enter first and last name !")
     else:

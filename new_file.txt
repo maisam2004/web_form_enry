@@ -1,0 +1,15 @@
+47:39 /n first name : Yalan , last name = REEVERA,/n rgistery status =Registered  age : 21 natinality :bangali
+47:54 /n first name : Yalan , last name = REEVERA,/n rgistery status =Registered  age : 21 natinality :bangali
+49:37 
+ first name : gmasl , last name = rere, 
+ rgistery status =Registered  age : 23 natinality :indian
+--------- -----------------
+52:09 
+ first name : sff , last name = sfs, 
+ rgistery status =Registered  age : 18 natinality :
+ ----------------- -------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+54:21 
+ first name : xcv , last name = sdvs, 
+ rgistery status =NOT Registerd  age : 18 natinality :
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
