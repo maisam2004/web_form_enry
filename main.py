@@ -12,10 +12,10 @@ def enter_data():
      #course info
      numcourses = numcourses_spinbox.get()
      numsemesters = numsemesters_spinbox.get()
-     
+     registration_status = reg_status_var.get()
 
      print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
-
+     print(numcourses,numsemesters,'reg status > ',registration_status)   
 
 
 window = tkinter.Tk() #name root window 
