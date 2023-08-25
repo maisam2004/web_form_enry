@@ -78,7 +78,8 @@ for widget in courses_frame.winfo_children():
 
 
 #test user info just for practice
-second_users = tkinter.LabelFrame(frame,text="Second user",background='#e6f2ff')
+
+""" second_users = tkinter.LabelFrame(frame,text="Second user",background='#e6f2ff')
 second_users.grid(row=3,column=0,sticky="news",padx=10,pady=10)
 
 fname = tkinter.Label(second_users,text="fname")
@@ -99,7 +100,7 @@ fnumyears = tkinter.Spinbox(second_users,from_="1900",to="infinity")
 fnumyears.grid(row=1,column=2)
 
 for wid in second_users.winfo_children():
-    wid.grid_configure(padx=10,pady=10)
+    wid.grid_configure(padx=10,pady=10) """
 ####end test user ifo
 #terms condition frame
 terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
