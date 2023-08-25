@@ -1,11 +1,10 @@
 import tkinter 
-
 #import ttk module from tkinter for use list theme
 from tkinter import ttk
-
 from tkinter import messagebox
-
+#to grab now time 
 from datetime import datetime
+import csv 
 
 
 
@@ -31,8 +30,14 @@ def enter_data():  # sourcery skip: extract-method
             whole_text_info += "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
             with open('new_file.txt','+a')as Textfile:
                 print(whole_text_info,file=Textfile)
+            """ 
+            with open('infos.csv','+a',newline='') as csvdata:
+                infowriter = csv.writer(csvdata,delimiter=' ')
+                infowriter.writerow(lname)
+                infowriter.writerow(fname)
+                infowriter.writerow(national)
 
-            """ print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
+            print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
             print('number of courses ',numcourses,'and number of semesters = ',numsemesters,'reg status > ',registration_status)
             print("__ ____ ____ ___ ___ _ ____  ___ _ ____ ___ _ ___ __ ") """
         else:
