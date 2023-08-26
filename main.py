@@ -4,7 +4,7 @@ from tkinter import ttk
 from tkinter import messagebox
 #to grab now time 
 from datetime import datetime
-import csv 
+import csv,json
 
 
 
@@ -40,6 +40,10 @@ def enter_data():  # sourcery skip: extract-method
                     'semester number': numsemesters,
                 }
             } 
+
+            with open('1st_jfile.json','+a',encoding='utf8')as json_file:
+                json.dump(dict_info,json_file,ensure_ascii=False,indent=4)
+
             with open('new_file.txt','+a')as Textfile:
                 print(whole_text_info,file=Textfile)
                 print(dict_info,file=Textfile)
