@@ -17,6 +17,7 @@ class DataEntryApp:
 
         self.create_user_info_frame()
         self.create_courses_frame()
+        self.terms_conditions_frame()
 
     def create_user_info_frame(self):
         self.user_info_frame = tk.LabelFrame(self.frame, text="User Information")
@@ -77,6 +78,20 @@ class DataEntryApp:
 
         for widget in self.courses_frame.winfo_children():
             widget.grid_configure(padx=10,pady=5)
+
+    def terms_conditions_frame(self):
+        #terms condition frame
+        self.terms_frame = tk.LabelFrame(self.frame,text="Terms & Conditions")
+        self.terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
+
+        #variable for terms check box
+        #terms_status = tkinter.BooleanVar(value=False)
+        self.accept_var = tk.StringVar(value="Not accepted")
+        self.terms_check =tk.Checkbutton(self.terms_frame,text="I accepts the terms and conditions.",variable=self.accept_var,onvalue='Accepted',offvalue="Not accepted")
+        self.terms_check.grid(row=0,column=0)
+
+
+
 
 
     def enter_data(self):
