@@ -47,7 +47,7 @@ class DataEntryApp:
         for widget in self.user_info_frame.winfo_children():
             widget.grid_configure(padx=10, pady=5)
 
-        self.submit_button = tk.Button(self.frame, text="Submit", command=self.enter_data)
+        self.submit_button = tk.Button(self.frame, text="Submit",fg="red", command=self.enter_data)
         self.submit_button.grid(row=3, column=0, pady=10)
 
     def create_courses_frame(self):
