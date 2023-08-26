@@ -8,7 +8,7 @@ class DataEntryApp:
     def __init__(self, window):
         self.window = window
         self.window.title("Data Entry Form")
-
+        self.entries = {} #for dicitonary info appending
         self.setup_ui()
 
     def setup_ui(self):
@@ -123,12 +123,22 @@ class DataEntryApp:
                         'semester number': numsemesters,
                     },
                 }
+                self.entries.append(dict_info)
 
                 with open('1st_jfile.json', '+a', encoding='utf8') as json_file:
-                    json.dump(dict_info, json_file, ensure_ascii=False, indent=4)
+                    json.dump(self.entries, json_file, ensure_ascii=False, indent=4)
 
                 with open('new_file_class.txt', '+a') as Textfile:
                     print(whole_text_info, file=Textfile)
+
+                self.first_name_entry.delete(0, tk.END)
+                self.last_name_entry.delete(0, tk.END)
+                self.title_combobox.set('')
+                self.age_spinbox.delete(0, tk.END)
+                self.nationality_combobox.set('')
+                self.reg_status_var.set('NOT Registered')
+                self.numcourses_spinbox.delete(0, tk.END)
+                self.numsemesters_spinbox.delete(0, tk.END)
 
             else:
                 messagebox.showerror(title="Names Error", message="Please enter first and last name!")

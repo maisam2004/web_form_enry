@@ -10,3 +10,21 @@
  rgistery status =Registered  age : 33 natinality :bangali 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+46:13 
+ first name : gee , last name = lname='tere', 
+ rgistery status =Registered  age : 19 natinality :bangali 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+48:59 
+ first name : josn , last name = lname='bdslkj', 
+ rgistery status =Registered  age : 20 natinality :uk 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+10:28 
+ first name : gsfgs , last name = lname='gsggs', 
+ rgistery status =Registered  age : 19 natinality :bangali 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
