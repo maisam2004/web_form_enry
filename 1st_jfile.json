@@ -1,0 +1,32 @@
+{
+    "asmljk adam": {
+        "title": "MRS.",
+        "first name": "adam",
+        "last name": "asmljk",
+        "age": "18",
+        "nationality": "",
+        "registery status": "Registered",
+        "course number": "0",
+        "semester number": "0"
+    },
+    "sfkldjf fjs;lf": {
+        "title": "MRS.",
+        "first name": "fjs;lf",
+        "last name": "sfkldjf",
+        "age": "20",
+        "nationality": "sd",
+        "registery status": "Registered",
+        "course number": "",
+        "semester number": ""
+    },
+    "eere sfsf": {
+        "title": "MR.",
+        "first name": "sfsf",
+        "last name": "eere",
+        "age": "18",
+        "nationality": "",
+        "registery status": "NOT Registerd",
+        "course number": "0",
+        "semester number": "0"
+    }
+}

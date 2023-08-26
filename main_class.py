@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from datetime import datetime
-import json
+import json,os.path
 
 class DataEntryApp:
     def __init__(self, window):
@@ -10,6 +10,16 @@ class DataEntryApp:
         self.window.title("Data Entry Form")
         self.entries = {} #for dicitonary info appending
         self.setup_ui()
+        if os.path.exists('1st_jfile.json'):
+            self.load_entries_from_json()
+
+
+    def load_entries_from_json(self):
+        try:
+            with open('1st_jfile.json', 'r', encoding='utf8') as json_file:
+                self.entries = json.load(json_file)
+        except json.JSONDecodeError:
+            self.entries = {}
 
     def setup_ui(self):
         self.frame = tk.Frame(self.window)
@@ -112,7 +122,6 @@ class DataEntryApp:
                 whole_text_info += f'{now:%M:%S} \n first name : {fname} , last name = {lname=}, \n rgistery status ={registration_status}  age : {age} natinality :{national} \n'
                 whole_text_info += "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
                 dict_info = {
-                    f'{lname} {fname}': {
                         'title': title,
                         'first name': fname,
                         "last name": lname,
@@ -121,11 +130,11 @@ class DataEntryApp:
                         'registery status': registration_status,
                         'course number': numcourses,
                         'semester number': numsemesters,
-                    },
-                }
-                self.entries.append(dict_info)
+                    }
+                
+                self.entries[f'{lname} {fname}']=(dict_info)
 
-                with open('1st_jfile.json', '+a', encoding='utf8') as json_file:
+                with open('1st_jfile.json', 'w', encoding='utf8') as json_file:
                     json.dump(self.entries, json_file, ensure_ascii=False, indent=4)
 
                 with open('new_file_class.txt', '+a') as Textfile:
@@ -140,6 +149,7 @@ class DataEntryApp:
                 self.numcourses_spinbox.delete(0, tk.END)
                 self.numsemesters_spinbox.delete(0, tk.END)
 
+                self.clear_entries() 
             else:
                 messagebox.showerror(title="Names Error", message="Please enter first and last name!")
         else:
