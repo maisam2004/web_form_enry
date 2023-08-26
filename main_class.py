@@ -147,7 +147,10 @@ class DataEntryApp:
                 self.nationality_combobox.set('')
                 self.reg_status_var.set('NOT Registered')
                 self.numcourses_spinbox.delete(0, tk.END)
+                self.numcourses_spinbox.insert(0, "0")
                 self.numsemesters_spinbox.delete(0, tk.END)
+                self.numsemesters_spinbox.insert(0, "0")
+
                 self.accept_var.set("Not accepted")
 
                 
