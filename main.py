@@ -25,12 +25,30 @@ def enter_data():  # sourcery skip: extract-method
             numsemesters = numsemesters_spinbox.get()
             registration_status = reg_status_var.get()
             now = datetime.now()
-            whole_text_info = "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n"
-            whole_text_info += f'{now:%M:%S} \n first name : {fname} , last name = {lname}, \n rgistery status ={registration_status}  age : {age} natinality :{national}'
+            whole_text_info = ("- -"*20)+'\n'  #short wersion for dash lines
+            whole_text_info += f'{now:%M:%S} \n first name : {fname} , last name = {lname=}, \n rgistery status ={registration_status}  age : {age} natinality :{national} \n'
             whole_text_info += "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+            dict_info = {
+                f'{lname} {fname}': {
+                    'title': title,
+                    'first name': fname,
+                    "last name": lname,
+                    'age': age,
+                    'nationality': national,
+                    'registery status': registration_status,
+                    'course number': numcourses,
+                    'semester number': numsemesters,
+                }
+            } 
             with open('new_file.txt','+a')as Textfile:
                 print(whole_text_info,file=Textfile)
-            """ 
+                print(dict_info,file=Textfile)
+            """
+           
+
+
+
+
             with open('infos.csv','+a',newline='') as csvdata:
                 infowriter = csv.writer(csvdata,delimiter=' ')
                 infowriter.writerow(lname)

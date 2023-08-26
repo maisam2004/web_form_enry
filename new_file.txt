@@ -13,3 +13,30 @@
  first name : xcv , last name = sdvs, 
  rgistery status =NOT Registerd  age : 18 natinality :
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----------
+36:24 
+ first name : ali , last name = moosa, 
+ rgistery status =Registered  age : 21 natinality :bangali
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -
+37:21 
+ first name : kalki , last name = rwfw, 
+ rgistery status =NOT Registerd  age : 18 natinality :
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -
+39:44 
+ first name : fname='hadi' , last name = lname='vali', 
+ rgistery status =NOT Registerd  age : 18 natinality :turkey
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -
+40:29 
+ first name : eklfja , last name = lname='naa', 
+ rgistery status =NOT Registerd  age : 18 natinality :
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+20:27 
+ first name : varei , last name = lname='gtyo', 
+ rgistery status =Registered  age : 21 natinality :bangali 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+{'gtyo varei': {'title': 'MISS.', 'first name': 'varei', 'last name': 'gtyo', 'age': '21', 'nationality': 'bangali', 'registery status': 'Registered', 'course number': '1', 'semester number': '6'}}
