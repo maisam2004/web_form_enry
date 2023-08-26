@@ -1,0 +1,12 @@
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+30:42 
+ first name : john , last name = lname='smith', 
+ rgistery status =Registered  age : 33 natinality :bangali 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+30:44 
+ first name : john , last name = lname='smith', 
+ rgistery status =Registered  age : 33 natinality :bangali 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

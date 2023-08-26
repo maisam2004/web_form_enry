@@ -95,8 +95,46 @@ class DataEntryApp:
 
 
     def enter_data(self):
-        # Add your data entry code here
-        pass
+        terms = self.accept_var.get()
+
+        if terms == "Accepted":
+            fname = self.first_name_entry.get()
+            lname = self.last_name_entry.get()
+            if fname and lname:
+                title = self.title_combobox.get()
+                age = self.age_spinbox.get()
+                national = self.nationality_combobox.get()
+                numcourses = self.numcourses_spinbox.get()
+                numsemesters = self.numsemesters_spinbox.get()
+                registration_status = self.reg_status_var.get()
+                now = datetime.now()
+                whole_text_info = ("- -" * 20) + '\n'
+                whole_text_info += f'{now:%M:%S} \n first name : {fname} , last name = {lname=}, \n rgistery status ={registration_status}  age : {age} natinality :{national} \n'
+                whole_text_info += "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                dict_info = {
+                    f'{lname} {fname}': {
+                        'title': title,
+                        'first name': fname,
+                        "last name": lname,
+                        'age': age,
+                        'nationality': national,
+                        'registery status': registration_status,
+                        'course number': numcourses,
+                        'semester number': numsemesters,
+                    }
+                },
+
+                with open('1st_jfile.json', '+a', encoding='utf8') as json_file:
+                    json.dump(dict_info, json_file, ensure_ascii=False, indent=4)
+
+                with open('new_file_class.txt', '+a') as Textfile:
+                    print(whole_text_info, file=Textfile)
+
+            else:
+                messagebox.showerror(title="Names Error", message="Please enter first and last name!")
+        else:
+            messagebox.showinfo(title="Error", message="You have not accepted terms and conditions")
+
 
 if __name__ == "__main__":
     window = tk.Tk()
