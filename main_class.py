@@ -150,7 +150,7 @@ class DataEntryApp:
                 self.numsemesters_spinbox.delete(0, tk.END)
                 self.accept_var.set("Not accepted")
 
-                self.clear_entries() 
+                
             else:
                 messagebox.showerror(title="Names Error", message="Please enter first and last name!")
         else:
