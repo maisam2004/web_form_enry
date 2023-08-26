@@ -148,6 +148,24 @@ for widget in courses_frame.winfo_children():
     widget.grid_configure(padx=10,pady=5)
 
 
+#terms condition frame
+terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
+terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
+
+#variable for terms check box
+#terms_status = tkinter.BooleanVar(value=False)
+accept_var = tkinter.StringVar(value="Not accepted")
+terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.",variable=accept_var,onvalue='Accepted',offvalue="Not accepted")
+terms_check.grid(row=0,column=0)
+
+
+#add button
+button = tkinter.Button(frame,text="Enter data",fg="red",command=enter_data)
+button.grid(row=4,column=0,sticky="news",padx=20,pady=20)
+window.mainloop() #come up with 
+
+
+
 #test user info just for practice
 
 """ second_users = tkinter.LabelFrame(frame,text="Second user",background='#e6f2ff')
@@ -172,19 +190,5 @@ fnumyears.grid(row=1,column=2)
 
 for wid in second_users.winfo_children():
     wid.grid_configure(padx=10,pady=10) """
+
 ####end test user ifo
-#terms condition frame
-terms_frame = tkinter.LabelFrame(frame,text="Terms & Conditions")
-terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
-
-#variable for terms check box
-#terms_status = tkinter.BooleanVar(value=False)
-accept_var = tkinter.StringVar(value="Not accepted")
-terms_check =tkinter.Checkbutton(terms_frame,text="I accepts the terms and conditions.",variable=accept_var,onvalue='Accepted',offvalue="Not accepted")
-terms_check.grid(row=0,column=0)
-
-
-#add button
-button = tkinter.Button(frame,text="Enter data",fg="red",command=enter_data)
-button.grid(row=4,column=0,sticky="news",padx=20,pady=20)
-window.mainloop() #come up with 
