@@ -148,6 +148,7 @@ class DataEntryApp:
                 self.reg_status_var.set('NOT Registered')
                 self.numcourses_spinbox.delete(0, tk.END)
                 self.numsemesters_spinbox.delete(0, tk.END)
+                self.accept_var.set("Not accepted")
 
                 self.clear_entries() 
             else:
