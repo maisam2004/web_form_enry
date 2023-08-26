@@ -46,7 +46,7 @@ def enter_data():  # sourcery skip: extract-method
 
             with open('new_file.txt','+a')as Textfile:
                 print(whole_text_info,file=Textfile)
-                print(dict_info,file=Textfile)
+                
             """
            
 
