@@ -47,21 +47,7 @@ def enter_data():  # sourcery skip: extract-method
             with open('new_file.txt','+a')as Textfile:
                 print(whole_text_info,file=Textfile)
                 
-            """
-           
-
-
-
-
-            with open('infos.csv','+a',newline='') as csvdata:
-                infowriter = csv.writer(csvdata,delimiter=' ')
-                infowriter.writerow(lname)
-                infowriter.writerow(fname)
-                infowriter.writerow(national)
-
-            print(f'first_name ={fname} and last_name = {lname} title of him {title} with this age> {age} and funny nationality {national}' )
-            print('number of courses ',numcourses,'and number of semesters = ',numsemesters,'reg status > ',registration_status)
-            print("__ ____ ____ ___ ___ _ ____  ___ _ ____ ___ _ ___ __ ") """
+            
         else:
             messagebox.showerror(title="names error" ,message="plaese enter first and last name !")
     else:
