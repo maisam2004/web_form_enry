@@ -48,7 +48,7 @@ class DataEntryApp:
             widget.grid_configure(padx=10, pady=5)
 
         self.submit_button = tk.Button(self.frame, text="Submit", command=self.enter_data)
-        self.submit_button.grid(row=2, column=0, pady=10)
+        self.submit_button.grid(row=3, column=0, pady=10)
 
     def create_courses_frame(self):
         self.courses_frame = tk.LabelFrame(self.frame, text="Courses")
