@@ -38,7 +38,7 @@ def enter_data():  # sourcery skip: extract-method
                     'registery status': registration_status,
                     'course number': numcourses,
                     'semester number': numsemesters,
-                }
+                },
             } 
 
             with open('1st_jfile.json','+a',encoding='utf8')as json_file:

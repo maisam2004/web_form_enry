@@ -121,8 +121,8 @@ class DataEntryApp:
                         'registery status': registration_status,
                         'course number': numcourses,
                         'semester number': numsemesters,
-                    }
-                },
+                    },
+                }
 
                 with open('1st_jfile.json', '+a', encoding='utf8') as json_file:
                     json.dump(dict_info, json_file, ensure_ascii=False, indent=4)
