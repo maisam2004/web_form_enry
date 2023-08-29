@@ -14,7 +14,7 @@ class DataEntryApp:
             self.load_entries_from_json()
 
 
-    def load_entries_from_json(self):
+    def load_entries_from_json(self):#to read file data if file exist
         try:
             with open('1st_jfile.json', 'r', encoding='utf8') as json_file:
                 self.entries = json.load(json_file)
