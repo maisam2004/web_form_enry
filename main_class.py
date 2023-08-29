@@ -66,22 +66,22 @@ class DataEntryApp:
 
         # Add widgets for courses frame here
 
-        self.registered_lable = tk.Label(self.courses_frame,text="Registeration Status")
+        self.registered_lable = tk.Label(self.courses_frame,text="Registeration Status",fg='#ffff00',bg="#333333")
         self.registered_lable.grid(row=0,column=0)
 
         #create var to enable get checkbox click,and store in stringvar
         self.reg_status_var = tk.StringVar(value="NOT Registerd")
 
-        self.registered_check = tk.Checkbutton(self.courses_frame,text="Currently Registered",variable=self.reg_status_var ,onvalue="Registered",offvalue="NOT Registerd")
+        self.registered_check = tk.Checkbutton(self.courses_frame,text="Currently Registered",variable=self.reg_status_var ,onvalue="Registered",offvalue="NOT Registerd",fg="#d2a679",bg="#333333")
         self.registered_check.grid(row=1,column=0)
 
-        self.numcourses_lable = tk.Label(self.courses_frame,text="# Completed_courses")
+        self.numcourses_lable = tk.Label(self.courses_frame,text="# Completed_courses",fg='#ffff00',bg="#333333")
         self.numcourses_spinbox = tk.Spinbox(self.courses_frame,from_=0,to="infinity")
 
         self.numcourses_lable.grid(row=0,column=1)
         self.numcourses_spinbox.grid(row=1,column=1)
 
-        self.numsemesters_lable = tk.Label(self.courses_frame,text="# Semesters")
+        self.numsemesters_lable = tk.Label(self.courses_frame,text="# Semesters",fg='#ffff00',bg="#333333")
         self.numsemesters_lable.grid(row=0,column=2)
         self.numsemesters_spinbox = tk.Spinbox(self.courses_frame,from_=0,to="infinity" )
         self.numsemesters_spinbox.grid(row=1,column=2)
