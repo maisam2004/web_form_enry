@@ -22,7 +22,7 @@ class DataEntryApp:
             self.entries = {}
 
     def setup_ui(self):
-        self.frame = tk.Frame(self.window)
+        self.frame = tk.Frame(self.window,bg="#333333")
         self.frame.pack()
 
         self.create_user_info_frame()
@@ -30,11 +30,11 @@ class DataEntryApp:
         self.terms_conditions_frame()
 
     def create_user_info_frame(self):
-        self.user_info_frame = tk.LabelFrame(self.frame, text="User Information")
+        self.user_info_frame = tk.LabelFrame(self.frame, text="User Information",fg="#ffffe6",bg="#333333")
         self.user_info_frame.grid(row=0, column=0, padx=20, pady=10)
 
-        tk.Label(self.user_info_frame, text="First Name").grid(row=0, column=0)
-        tk.Label(self.user_info_frame, text="Last Name").grid(row=0, column=1)
+        tk.Label(self.user_info_frame, text="First Name",fg='#ffff00',bg="#333333").grid(row=0, column=0)
+        tk.Label(self.user_info_frame, text="Last Name",fg='#ffff00',bg="#333333").grid(row=0, column=1)
 
         self.first_name_entry = tk.Entry(self.user_info_frame)
         self.first_name_entry.grid(row=1, column=0)
@@ -42,15 +42,15 @@ class DataEntryApp:
         self.last_name_entry = tk.Entry(self.user_info_frame)
         self.last_name_entry.grid(row=1, column=1)
 
-        tk.Label(self.user_info_frame, text="Title").grid(row=0, column=2)
+        tk.Label(self.user_info_frame, text="Title",fg='#ffff00',bg="#333333").grid(row=0, column=2)
         self.title_combobox = ttk.Combobox(self.user_info_frame, values=['', 'MR.', 'MISS.', 'MRS.', 'DR.', 'PROF.'])
         self.title_combobox.grid(row=1, column=2)
 
-        tk.Label(self.user_info_frame, text="Age").grid(row=2, column=0)
+        tk.Label(self.user_info_frame, text="Age" ,fg='#ffff00',bg="#333333").grid(row=2, column=0)
         self.age_spinbox = tk.Spinbox(self.user_info_frame, from_=18, to=110)
         self.age_spinbox.grid(row=3, column=0)
 
-        tk.Label(self.user_info_frame, text="Nationality").grid(row=2, column=2)
+        tk.Label(self.user_info_frame, text="Nationality" ,fg='#ffff00',bg="#333333").grid(row=2, column=2)
         self.nationality_combobox = ttk.Combobox(self.user_info_frame, values=['indian', "bangali", "turkey", "uk"])
         self.nationality_combobox.grid(row=3, column=2)
 
@@ -61,7 +61,7 @@ class DataEntryApp:
         self.submit_button.grid(row=3, column=0, pady=10)
 
     def create_courses_frame(self):
-        self.courses_frame = tk.LabelFrame(self.frame, text="Courses")
+        self.courses_frame = tk.LabelFrame(self.frame, text="Courses" ,fg="#ffffe6",bg="#333333")
         self.courses_frame.grid(row=1, column=0, padx=20, pady=10)
 
         # Add widgets for courses frame here
@@ -91,13 +91,13 @@ class DataEntryApp:
 
     def terms_conditions_frame(self):
         #terms condition frame
-        self.terms_frame = tk.LabelFrame(self.frame,text="Terms & Conditions")
+        self.terms_frame = tk.LabelFrame(self.frame,text="Terms & Conditions",fg="#ffffe6",bg="#333333")
         self.terms_frame.grid(row=2,column=0,sticky="news",padx=20,pady=10)
 
         #variable for terms check box
         #terms_status = tkinter.BooleanVar(value=False)
         self.accept_var = tk.StringVar(value="Not accepted")
-        self.terms_check =tk.Checkbutton(self.terms_frame,text="I accepts the terms and conditions.",variable=self.accept_var,onvalue='Accepted',offvalue="Not accepted")
+        self.terms_check =tk.Checkbutton(self.terms_frame,text="I accepts the terms and conditions.",variable=self.accept_var,onvalue='Accepted',offvalue="Not accepted" ,fg="#ffffe6",bg="#333333")
         self.terms_check.grid(row=0,column=0)
 
 
