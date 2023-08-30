@@ -72,7 +72,7 @@ class DataEntryApp:
         #create var to enable get checkbox click,and store in stringvar
         self.reg_status_var = tk.StringVar(value="NOT Registerd")
 
-        self.registered_check = tk.Checkbutton(self.courses_frame,text="Currently Registered",variable=self.reg_status_var ,onvalue="Registered",offvalue="NOT Registerd",fg="#d2a679",bg="#333333")
+        self.registered_check = tk.Checkbutton(self.courses_frame,text="Currently Registered",variable=self.reg_status_var ,onvalue="Registered",offvalue="NOT Registerd",fg="#332900")
         self.registered_check.grid(row=1,column=0)
 
         self.numcourses_lable = tk.Label(self.courses_frame,text="# Completed_courses",fg='#ffff00',bg="#333333")
@@ -88,6 +88,7 @@ class DataEntryApp:
 
         for widget in self.courses_frame.winfo_children():
             widget.grid_configure(padx=10,pady=5)
+            
 
     def terms_conditions_frame(self):
         #terms condition frame
@@ -97,7 +98,7 @@ class DataEntryApp:
         #variable for terms check box
         #terms_status = tkinter.BooleanVar(value=False)
         self.accept_var = tk.StringVar(value="Not accepted")
-        self.terms_check =tk.Checkbutton(self.terms_frame,text="I accepts the terms and conditions.",variable=self.accept_var,onvalue='Accepted',offvalue="Not accepted" ,fg="#ffffe6",bg="#333333")
+        self.terms_check =tk.Checkbutton(self.terms_frame,text="I accepts the terms and conditions.",variable=self.accept_var,onvalue='Accepted',offvalue="Not accepted" ,fg="#944dff",bg="#333333",font=('arial',12))
         self.terms_check.grid(row=0,column=0)
 
 
